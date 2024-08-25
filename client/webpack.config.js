@@ -31,6 +31,8 @@ module.exports = () => {
         description: 'Text Editor',
         background_color: '#ffffff',
         theme_color: '#ffffff',
+        start_url: './',
+        publicPath: './',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
@@ -57,6 +59,14 @@ module.exports = () => {
             },
           },
         },
+        {
+          test: /\.(png|jpeg|jpg|svg|gif|webp)$/i,
+          type: "asset/resource",
+          generator: {
+            filename: "images/[name][ext]",
+          },
+        }
+
       ],
     },
   };
