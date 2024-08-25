@@ -2,6 +2,7 @@ import { Workbox } from 'workbox-window';
 import Editor from './editor';
 import './database';
 import '../css/style.css';
+import logo96 from '../images/logo.png';
 
 const main = document.querySelector('#main');
 main.innerHTML = '';
@@ -16,6 +17,8 @@ const loadSpinner = () => {
   `;
   main.appendChild(spinner);
 };
+
+document.querySelector('.navbar-brand img').src = logo96;
 
 const editor = new Editor();
 
