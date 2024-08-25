@@ -20,6 +20,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
+        inject: true
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
@@ -63,7 +64,7 @@ module.exports = () => {
           test: /\.(png|jpeg|jpg|svg|gif|webp)$/i,
           type: "asset/resource",
           generator: {
-            filename: "images/[name][ext]",
+            filename: "images/[name].[hash][ext]",
           },
         }
 
